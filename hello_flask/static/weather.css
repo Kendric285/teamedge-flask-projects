@@ -1,0 +1,183 @@
+.header{
+    text-align: center;
+
+}
+.weather{
+    text-align: center;  
+}
+
+
+html {
+height: 100%;
+}
+#clothesheader {
+  text-align: center;
+
+}
+.wrapper {
+width: auto;
+text-align: center;
+
+}
+.dropdown-pants {
+vertical-align: top;
+float: middle;
+display: inline-block;
+width: 200px;
+height: 200px;
+text-align: center;
+color: blue;
+
+}
+.dropdown-shirts {
+vertical-align: top;
+display: inline-block;
+width: 200px;
+height: 200px;
+float: middle;
+text-align: center;
+color: blue;
+
+
+}
+
+.dropdown-accessories  {
+vertical-align: top;
+display: inline-block;
+width: 200px;
+height: 200px;
+float: middle;
+text-align: center;
+color: blue;
+
+
+}
+
+
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+padding: 12px 16px;
+z-index: 1;
+float: left;
+
+}
+
+.dropdown-pants:hover .dropdown-content {
+display: block;
+}
+
+.dropdown-shirts:hover .dropdown-content {
+display: block;
+}
+
+
+.dropdown-accessories:hover .dropdown-content {
+display: block;
+}
+
+
+
+
+
+
+
+
+.submit-state {
+margin: auto;
+top: 0%;
+border-radius: 30%;
+font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+.find{
+margin: auto;
+padding: 20px;
+font-size: 18px;
+font-family: "Comic Sans MS", cursive, sans-serif;
+border: 3px solid green;
+background-color: Blue;
+color: white;
+height: 100px;
+width: 100px;
+font-family: 'Font Name', serif;
+border-radius: 30%;
+
+}
+button:hover {
+border: 3px solid blue;
+background-color: green;
+
+}
+body {
+margin: auto;
+display: flex;
+flex-direction: column;
+justify-content: top;
+height: 100px;
+background-repeat: no-repeat;
+background-position: center; 
+background-size: cover;
+background-image: url("https://i.gifer.com/RS5Y.gif"); 
+letter-spacing: 2px;
+font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+
+
+h1 {
+font-style: italic;
+color: #ff3b59;
+font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+.name-state{
+text-align: center;
+font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+.info{
+text-align: center;
+color: #ff3b59;
+font-family: "Comic Sans MS", cursive, sans-serif;
+
+
+
+}
+.info:hover{
+background-color: yellow;
+
+}
+
+.home {
+margin: auto;
+padding: 20px;
+font-size: 32.5px;
+font-family:2 "Comic Sans MS", cursive, sans-serif;
+border: 3px solid green;
+background-color: Blue;
+color: white;
+height: 200px;
+width: 200px;
+font-family: 'Font Name', serif;
+border-radius: 40%;
+}
+
+.different{
+margin: auto;
+padding: 20px;
+font-size: 32.5px;
+font-family:2 "Comic Sans MS", cursive, sans-serif;
+border: 3px solid green;
+background-color: Blue;
+color: white;
+height: 200px;
+width: 200px;
+font-family: 'Font Name', serif;
+border-radius: 40%;
+}
+

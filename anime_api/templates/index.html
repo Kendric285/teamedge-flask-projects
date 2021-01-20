@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body> 
+    {%for result in results%}
+    <div>
+        <h3>{{result['title']}}</h3>
+        <p>Released: {{result['year']}}</p>
+    </div>
+    {%endfor%}
+    
+</body>
+</html>

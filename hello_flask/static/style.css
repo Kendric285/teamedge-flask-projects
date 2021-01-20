@@ -1,0 +1,91 @@
+html {
+    background: black;
+    text-align: center;
+    font-family: Marker Felt, fantasy;
+    
+   
+  }
+  
+  .name{
+    font-size: 15px;
+    font-family: fantasy;
+  }
+  
+  .awardsTitle{
+    color: white;
+  }
+  
+  .animeAward{
+    padding:1em;
+      border-radius: 20px;
+      background-color: #132027;
+      width: 60vw;
+      margin:25vh auto 0px auto;
+  }
+  
+  .animeAwardTitle{
+    font-size: 28px;
+    font-family: Marker Felt, fantasy;
+    color: white;
+    
+  }
+  
+  .winnerDescription p{
+    font-size: 20px;
+    font-family: Marker Felt, fantasy;
+    color: white;
+  
+  }
+  
+  caption{
+    font-size: 28px;
+    font-family: Marker Felt, fantasy;
+    color: white;
+    
+  }
+  
+  .rounded{
+    border-top: 8px solid;
+    border-radius: 5px;
+    background:#FED502 ;
+    border-top-left-radius:#FED502 ;
+    color: #FED502 ;
+    width: 450px;
+  }
+  
+  tr,td {
+    padding: 20px ;
+    margin: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: black;
+    border-radius: 20px;
+    color: white;
+    
+  }
+  
+  
+  
+  table{
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+  .winnerDescription a{
+    font-size: 28px;
+    
+  }
+  
+  a{
+    font-family: Marker Felt, fantasy;
+    color: #FED502 ;
+    text-decoration-line: none;
+    
+  }
+  
+  a:hover{
+    color: #2BBDBC;
+  }
+  
+  

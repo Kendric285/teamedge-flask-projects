@@ -1,0 +1,10 @@
+/* CSS files add styling rules to your content */
+
+div{
+    padding:1em;
+      border-radius: 20px;
+      background-color: red;
+      width: 60vw;
+      margin:25vh auto 0px auto;
+  }
+  

@@ -1,0 +1,44 @@
+{
+    "My Hero Academia": [
+        {
+            "episodes":[
+                {
+                    "number":88
+                }
+                ,{
+                    "episode_names":[
+                        "Izuku Midoriya: Origin",
+                        "What It Takes to Be a Hero"
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "ongoing": true
+        },
+        {
+            "year_released": 2014
+        },
+        {
+            "description": "The story follows Izuku Midoriya, a boy born without superpowers in a world where they are the norm, but who still dreams of becoming a superhero himself, and is scouted by the world's greatest hero who shares his powers with Izuku after recognizing his value and enrolls him in a high school for heroes in training."
+        }
+       
+    ]
+
+    ,"One Piece": [
+        {
+            "episodes": 956
+        },
+        {
+            "ongoing": true
+        },
+        {
+            "year_released": 1999
+        },
+        {
+            "description": "The story follows Izuku Midoriya, a boy born without superpowers in a world where they are the norm, but who still dreams of becoming a superhero himself, and is scouted by the world's greatest hero who shares his powers with Izuku after recognizing his value and enrolls him in a high school for heroes in training."
+        }
+    ]
+    
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>      
+    <title>Weather App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+     href="https://fonts.googleapis.com/css?family=Font+Name">
+    <link rel="stylesheet" href="static/weather.css">
+    
+    <script src="static/weather.js" defer></script>
+  </head>  
+  
+  <div class = "header">
+    <h1 id = "clothes-header">
+    Loading Clothes
+  </h1>
+  </div>
+  <div class = "weather">
+    <h1 id = "weather-header">
+      Calculating Weather
+      
+    </h1>
+  </div>
+  
+  
+  <body>
+    <h1 class = "name-state" id = "state-name"></h1>
+    <h2 class = "info" id = "high"></h2>
+    <h2 class = "info" id = "low"></h2>
+    <h2 class = "info" id = "summary"></h2>
+
+          <button class="home" id="enter">Find Your Weather</button>    
+    
+          <form class = "submit-state" id="finder" type="submit">
+          <input id="search-txt" type="text" placeholder= "Enter your area">
+      </form>
+    
+    <button class = "find" id="findBtn" >Submit Area</button>
+    <p  id = "s" class = "info">Click Me To Find Clothes!</p>
+    <button class = "find" id="clothes" >Find Clothes</button>
+    <p  id = "c" class = "info">Choose A Different Area</p>
+  
+<div class = "wrapper">
+  
+    
+  <!---- div for pants --->
+
+    <div class="dropdown-pants">
+  <span>Pants</span>
+  <div  id = "pants" class="dropdown-content">
+    
+
+<!-- https://stackoverflow.com/questions/18160342/jquery-how-to-trigger-click-event-on-pressing-enter-key--->
+    
+  </div>
+ </div>
+    <!---- div end for pants --->
+    
+    <!---- div for shirts --->
+     <div class="dropdown-shirts">
+  <span>Shirts</span>
+  <div id = "shirt" class="dropdown-content">
+    
+
+
+
+  </div>
+  
+    </div>
+  <!---- div end for shirts --->
+  
+  <!---- div for accessories --->
+
+  <div class="dropdown-accessories">
+  <span>Accessories</span>
+  <div id = "a" class="dropdown-content">
+     
+  </div>
+  
+    </div>
+  <!---- div end for accessories --->
+  
+  <!---- div for sweaters   --->
+
+  <div class="dropdown-accessories">
+  <span>Sweaters and Jackets</span>
+  <div id = "jackets" class="dropdown-content">
+    
+  </div>
+  
+    </div>
+  <!---- div end for Sweaters --->
+  
+   <!---- div for shoes   --->
+
+  <div class="dropdown-accessories">
+  <span>Shoes</span>
+  <div id = "shoes" class="dropdown-content">
+    
+  </div>
+  
+    </div>
+  <!---- div end for Sweaters --->
+  
+    </div>
+    <button id = "another" class = "find">Back To Home</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>    
+  </body>
+</html>
