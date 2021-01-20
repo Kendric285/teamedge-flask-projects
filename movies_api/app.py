@@ -15,7 +15,7 @@ def anime_json():
     with open(anime_info, 'r') as anime_json_data:
         anime_json_info = json.load(anime_json_data)
         return jsonify(anime_json_info)
-
+   
 def getJSONfromUrl(url): 
   response = requests.get(url)
   json_data = json.loads(response.text)
@@ -47,7 +47,7 @@ def movies_search_title():
 #     episodes = api_data[0][0]['number']
 
 #     return render_template('index.html', number = str(episodes))
-
+#hello
 if __name__ == '__main__':
     app.run(debug = True, host='192.168.167.235')
 
