@@ -8,14 +8,12 @@
     
 </head>
 <body> 
-    {%for holiday in api_data%}
+    {%for data in range(1,26)%}
     <div>
-        <h3>{{holiday['name']}}</h3>
-        {%for info in holiday%}
-        <ul>
-            <li>{{info}} : {{holiday[info]}}</li>
-        </ul>
-        {%endfor%}        
+       
+       <img src="{{cards[data]}}" alt="">
+       <h3>{{value[data]}}</h3>
+       
     </div>
     {%endfor%}
     

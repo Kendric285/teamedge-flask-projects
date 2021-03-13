@@ -1,0 +1,36 @@
+{
+    "Kendric": [ 
+        {
+            "favoriteColor": "Red",
+            "food": "pizza",
+            "age": 15,
+            "highschool": "MCSM",
+            "zodiac": "aquarius"
+            
+        }
+    ],
+
+    "Daniel-M": [
+        {
+            "favoriteColor":"yellow",
+            "food":"sushi", 
+            "age":15,
+            "highSchool":"Manhattan Center for Science and Mathmatics",
+            "zodiacSign":"Aries" 
+        }
+
+    ],
+
+    "Mohamed": [
+        {
+            "favoriteColor":"purple",
+            "food":"pizaa", 
+            "age":17,
+            "highSchool":"BTHS",
+            "zodiacSign":"Scorpio" 
+        }
+
+    ]
+
+
+}
