@@ -6,6 +6,7 @@ import datetime
 import requests
 from flask import render_template, redirect, url_for
 import os
+import sqlite3
 from time import sleep
 from sense_hat import SenseHat
 sense = SenseHat()
@@ -16,7 +17,19 @@ app = Flask(__name__)
 @app.route('/success/ <name> / <r> / <g> / <b>')
 def success(name,r, g, b):
    sense.show_message(name, text_colour=[int(r),int(g),int(b)]) 
-   return 'welcome %s' % name
+   return '<a href = "/all">All messages</a>'
+
+@app.route('/all')
+def all():
+   conn = sqlite3.connect('./static/data/data.db')
+   curs = conn.cursor()
+   messages = []
+   rows = curs.execute("SELECT * from messages")
+   for row in rows:
+      message = {'message' : row[0],'r' : row[1] ,'g' : row[2] ,'b' : row[1]}
+      messages.append(message)
+   conn.close()
+   return render_template('all.html', messages = messages)
 
 @app.route('/login',methods = ['POST', 'GET'])
 def login():
@@ -25,6 +38,12 @@ def login():
       red = request.form['r']
       green = request.form['g']
       blue = request.form['b']
+
+      conn = sqlite3.connect('./static/data/data.db')
+      curs = conn.cursor()
+      curs.execute('INSERT INTO messages (message, r, g, g) VALUES((?),(?),(?),(?))', (user, red, green, blue))
+      conn.commit()
+      conn.close()
       
       return redirect(url_for('success',name = user, r = str(red), g = str(green), b = str(blue)))
    else:
@@ -32,6 +51,13 @@ def login():
       red = request.args.get('r')
       green = request.args.get('g')
       blue = request.args.get('b')
+
+      conn = sqlite3.connect('./static/data/data.db')
+      curs = conn.cursor()
+      curs.execute('INSERT INTO messages (message, r, g, g) VALUES((?),(?),(?),(?))', (user, red, green, blue))
+      conn.commit()
+      conn.close()
+  
       
       return redirect(url_for('success',name = user, r = str(red), g = str(green), b = str(blue)))
 
@@ -42,4 +68,4 @@ def submit():
 
 
 if __name__ == '__main__':
-    app.run(debug = True, host='192.168.167.235')
+    app.run(debug = True, host='127.0.0.1')

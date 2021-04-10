@@ -10,31 +10,13 @@
     
 </head>
 <body>
+      <h1>Messages</h1>
+      {% for message in messages%}
+        <p style="background-color: rgb({{message["r"]}}, {{message["g"]}}, {{message["b"]}})">{{message["message"]}}</p>
 
-        <form action = "/login" method = "post">
-          <div class = "row">
+      {%endfor%}
 
-            <div class = "col-6">
-              <p>Enter Message:</p>
-              <p><input type = "text" name = "nm" /></p>
-            </div>
-            
-            <div class = "col-6">
-              <p>Enter Color:</p>
-              <p>r:</p>
-              <p><input type = "number" name = "r" /></p>
-              <p>g:</p>
-              <p><input type = "number" name = "g" /></p>
-              <p>b:</p>
-              <p><input type = "number" name = "b" /></p>
-            </div>
-            
-          </div>
-            
-            <p><input type = "submit" value = "submit" /></p>
-        </form>  
-
-
+      <a href="/">Home</a>
        
 
 
