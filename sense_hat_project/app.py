@@ -41,7 +41,7 @@ def login():
 
       conn = sqlite3.connect('./static/data/data.db')
       curs = conn.cursor()
-      curs.execute('INSERT INTO messages (message, r, g, g) VALUES((?),(?),(?),(?))', (user, red, green, blue))
+      curs.execute('INSERT INTO messages (message, r, g, b ) VALUES((?),(?),(?),(?))', (user, red, green, blue))
       conn.commit()
       conn.close()
       
@@ -54,7 +54,7 @@ def login():
 
       conn = sqlite3.connect('./static/data/data.db')
       curs = conn.cursor()
-      curs.execute('INSERT INTO messages (message, r, g, g) VALUES((?),(?),(?),(?))', (user, red, green, blue))
+      curs.execute('INSERT INTO messages (message, r, g, b) VALUES((?),(?),(?),(?))', (user, red, green, blue))
       conn.commit()
       conn.close()
   
