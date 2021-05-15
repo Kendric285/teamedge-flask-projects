@@ -17,10 +17,16 @@
   
       <form action = "/login" method = "post">
 
-            <div class = "col-6">
-              <p>Enter Reminder:</p>
-              <p><input type = "text" name = "r" /></p>
-            </div>
+        <p>Enter Reminder:</p>
+        <p><input type = "text" name = "r" /></p>
+
+        <label for="date">Pick a date</label>
+	        <input type="date" name="date" id="date">
+	        <br>
+	        
+	      <label for="time">Hour</label>
+	        <input type="time" id="time" name="time">
+	        <br>
             
            
             
@@ -43,7 +49,10 @@
             <p>{{message['reminder']}}</p>
           </div>
           <div class = "col-md">
-            <a href="/buttonPressed/{{message['id']}}"><button>Finish</button></a>
+            <p>{{message['time']}}</p>
+          </div>
+          <div class = "col-md">
+            <a href="/buttonPressed/{{message['id']}}/{{message['reminder']}}"><button>Finish</button></a>
           </div>
         </div>
 
