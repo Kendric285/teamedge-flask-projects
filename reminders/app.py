@@ -2,7 +2,7 @@ import flask
 from flask import Flask
 from flask import json
 from flask import jsonify, request
-import datetime  
+import datetime
 import requests
 from flask import render_template, redirect, url_for
 import os
@@ -13,10 +13,10 @@ sense = SenseHat()
 
 
 app = Flask(__name__)
-
+#gihub test
 # @app.route('/success/ <name> / <r> / <g> / <b>')
 # def success(name,r, g, b):
-#    sense.show_message(name, text_colour=[int(r),int(g),int(b)]) 
+#    sense.show_message(name, text_colour=[int(r),int(g),int(b)])
 #    return '<a href = "/all">All messages</a>'
 
 # @app.route('/all')
@@ -39,7 +39,7 @@ def login():
 
         # get time
       form_time = request.form['time'] # in format 24 hour, eg 1:30PM = 13:30
-        
+
         # create Python date from form_date and form_time. We use the python datetime string formmatting to describe how the date is built YYYY-MM-DD HH:MM
 
       date = datetime.datetime.strptime(form_date + " " + form_time,"%Y-%m-%d %H:%M")
@@ -54,21 +54,21 @@ def login():
          messages.append(message)
       conn.commit()
       conn.close()
-      
+
       return render_template('index.html', messages = messages)
    else:
-      
+
       reminder = request.args.get('r')
 
       form_date = request.args.get('date') # in format 2012-10-25 or in Python String formatting %Y-%m-%d
 
         # get time
       form_time = request.form.get('time') # in format 24 hour, eg 1:30PM = 13:30
-        
+
         # create Python date from form_date and form_time. We use the python datetime string formmatting to describe how the date is built YYYY-MM-DD HH:MM
 
       date = datetime.datetime.strptime(form_date + " " + form_time,"%Y-%m-%d %H:%M")
-      
+
 
       conn = sqlite3.connect('./static/data/data.db')
       curs = conn.cursor()
@@ -80,8 +80,8 @@ def login():
          messages.append(message)
       conn.commit()
       conn.close()
-  
-      
+
+
       return render_template('index.html', messages = messages)
 
 @app.route('/', methods=['GET'])
@@ -95,7 +95,7 @@ def submit():
       messages.append(message)
    conn.close()
    return render_template('index.html', messages = messages)
-   
+
 @app.route('/buttonPressed/<btn>/<reminder>')
 def delete_task(btn,reminder):
     conn = sqlite3.connect('./static/data/data.db')
@@ -107,11 +107,11 @@ def delete_task(btn,reminder):
     for row in rows:
       message = {'reminder' : row[0],'id' : row[1],'time' : row[2]}
       messages.append(message)
-    
+
     conn.commit()
     conn.close()
     sense.show_message('You have completed ')
-    sense.show_message(reminder) 
+    sense.show_message(reminder)
     return render_template('index.html', messages = messages)
 
 @app.route('/deleteAll')
